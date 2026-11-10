@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Marketing Bot - Ma-Boyounon Inc</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1>🎯 Digital Marketing Bot</h1>
+                <p class="subtitle">Powered by Azure OpenAI - Ma-Boyounon Inc</p>
+            </div>
+            <button class="clear-btn" onclick="clearConversation()">🔄 Clear</button>
+        </header>
+
+        <main class="main-content">
+            <aside class="sidebar">
+                <h2>📋 Templates</h2>
+                <div id="templates" class="templates-list"></div>
+            </aside>
+
+            <section class="chat-section">
+                <div class="chat-container" id="chatContainer">
+                    <div class="welcome-message">
+                        <h2>Welcome to Digital Marketing Bot! 🤖</h2>
+                        <p>Ask me anything about:</p>
+                        <ul>
+                            <li>📱 Social Media Marketing Strategies</li>
+                            <li>✍️ Content Creation & Copywriting</li>
+                            <li>🔍 SEO Optimization</li>
+                            <li>📧 Email Marketing Campaigns</li>
+                            <li>💰 Paid Advertising (Google, Meta, LinkedIn)</li>
+                            <li>📊 Marketing Analytics</li>
+                            <li>🎨 Brand Strategy & Positioning</li>
+                            <li>🎯 Customer Engagement</li>
+                        </ul>
+                        <p class="hint">👉 Try asking: "Create a social media marketing plan for Q1"</p>
+                    </div>
+                </div>
+
+                <div class="input-section">
+                    <form onsubmit="sendMessage(event)">
+                        <div class="input-wrapper">
+                            <textarea 
+                                id="messageInput" 
+                                placeholder="Ask your marketing question... (Press Ctrl+Enter to send)" 
+                                rows="3"
+                                onkeydown="handleKeypress(event)"></textarea>
+                            <button type="submit" class="send-btn" id="sendBtn">
+                                ➤ Send
+                            </button>
+                        </div>
+                    </form>
+                    <div class="status" id="status"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
